@@ -84,19 +84,19 @@ Trae la posibilidad de hacer una conversión a:
 </ul>
 <br>
 
-![Conversor Captura](https://github.com/Kxtss/prueba/assets/126207113/ddee9815-d850-4341-a4cf-da383a0da3a1)
+![Conversor Captura](https://github.com/Kxtss/Conversor-con-Java/assets/126207113/37a0305a-d720-4c96-977e-aa36223a4780)
 
 # Documentación
 En el <strong>index.html</strong> vienen los paquetes que contiene el proyecto (no sale el paquete de <i>Escenas</i> ya que este no contiene una clase). 
 
-![Paquetes información](https://github.com/Kxtss/prueba/assets/126207113/471f3cc2-b0cd-4833-9902-24ace7c96ca3)
+![Paquetes Información](https://github.com/Kxtss/Conversor-con-Java/assets/126207113/4a5fc76e-9f0d-45e9-8550-af6b18d15fdc)
 
 En el paquete de aplicación (<i>Package.application</i>) contiene la información documentada de las clases que brindan la lógica al programa.
-![Paquete aplicación](https://github.com/Kxtss/prueba/assets/126207113/03fad442-e0ac-4bf6-a86a-0a5f1538fae3)
+![Paquete Aplicación](https://github.com/Kxtss/Conversor-con-Java/assets/126207113/0fe1b8d1-3ddb-427e-ad59-2212503fe62e)
 
 En el paquete de valores (<i>Package.Valores</i>) contiene la información documentada de las clases que brindan apoyo a las clases controladoras de la lógica. Estos almacenan los valores requeridos para que los Controladores funcionen correctamente en la conversión.
 
-![Paquete Valores](https://github.com/Kxtss/prueba/assets/126207113/e35d0d38-7ded-409a-9c4b-5482056cd35c)
+![Paquete Valores](https://github.com/Kxtss/Conversor-con-Java/assets/126207113/f3a9f834-e063-42e7-828a-9cfa0382edac)
 
 <em>Cada clase contiene una documentación detallada para que funciona cada método</em>
 
