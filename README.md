@@ -24,7 +24,7 @@ También cabe a recalcar que el <code>stylesheet.css</code> del Javadoc sale con
 
 # Conversor
 Este programa se hizo en base al <strong>Challenge ONE Back End - Java Sprint 01: Crea tu propio conversor de moneda</strong>.
-Fue hecho con JavaFX, SceneBuilder, extensión "e(fx)clipse 3.8.0", Eclipse IDE 2023-06 y Java SDK 17.
+Fue hecho con JavaFX, SceneBuilder, extensión "e(fx)clipse 3.8.0", Eclipse IDE 2023-06 y Java JDK 17.
 
 Trae la posibilidad de hacer una conversión a:
 <ul>
@@ -106,6 +106,8 @@ En el paquete de valores (<i>Package.Valores</i>) contiene la información docum
   <li><a href="https://gluonhq.com/products/javafx/">JavaFX</a></li>
   <li><a href="https://gluonhq.com/products/scene-builder/">SceneBuilder</a></li>
   <li><a href="https://openjfx.io/openjfx-docs/">Documentacion de JavaFX</a></li>
+  <li><a href="https://projects.eclipse.org/projects/technology.efxclipse">e(fx)clipse</a></li>
+  <li><a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">Java JDK 17</a></li>
 </ul>
 
 # Conclusión
