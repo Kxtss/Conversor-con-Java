@@ -1,0 +1,53 @@
+/* Estilo para el contenedor raíz de la aplicación */
+.root {
+    /* Cambia el tipo de fuente de todos los elementos dentro del contenedor raíz a "Lucida Console" */
+    -fx-font-family: "Lucida Console";
+}
+
+/* Estilo para el fondo del menú */
+#menuFondo {
+    /* Establece el color de fondo del menú a #E7E7E7 */
+    -fx-background-color: #E7E7E7;
+}
+
+/* Estilo para la lista de opciones */
+.list-view {
+    /* Establece el color de fondo de la lista de opciones a #E7E7E7 */
+    -fx-background-color: #E7E7E7;
+    /* Establece el tamaño de fuente de los elementos de la lista a 12px */
+    -fx-font-size: 12px;
+}
+
+/* Estilo para cada celda de la lista de opciones */
+.list-cell {
+    /* Establece el espacio interno (padding) de cada celda a 13px */
+    -fx-padding: 13px;
+    /* Alinea el contenido de la celda al centro */
+    -fx-alignment: center;
+}
+
+/* Estilo para la celda de la lista de opciones al pasar el ratón sobre ella */
+.list-cell:hover {
+    /* Cambia el color de fondo de la celda a #e6e6e6 al pasar el ratón sobre ella */
+    -fx-background-color: #e6e6e6;
+}
+
+/* Estilo para la celda de la lista de opciones al estar seleccionada */
+.list-cell:selected {
+    /* Cambia el color de fondo de la celda a #c0c0c0 cuando está seleccionada */
+    -fx-background-color: #c0c0c0;
+    /* Cambia el color del texto a blanco cuando está seleccionada */
+    -fx-text-fill: white;
+}
+
+/* Estilo para las etiquetas que son copiables */
+.label-copyable {
+    /* Cambia el cursor del ratón al pasar sobre la etiqueta a una barra de texto */
+    -fx-cursor: text;
+    /* Subraya el texto en la etiqueta */
+    -fx-underline: true;
+    /* Permite que el texto se ajuste al ancho de la etiqueta */
+    -fx-wrap-text: true;
+    /* Alinea el texto de la etiqueta al centro */
+    -fx-text-alignment: center;
+}

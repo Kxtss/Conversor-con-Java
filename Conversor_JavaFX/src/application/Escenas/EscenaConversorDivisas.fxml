@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Documento FXML: EscenaConversorDivisas.fxml -->
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<!-- 
+    Documento FXML para la aplicación de Conversor de Divisas. Este archivo FXML describe el diseño de la interfaz de usuario.
+    Está asociado con la clase ControllerConversorDivisas que maneja la lógica y el manejo de eventos para la conversión de divisas.
+-->
+
+<AnchorPane fx:id="myPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerConversorDivisas">
+   <children>
+      
+      <!-- ComboBox para seleccionar la moneda de origen -->
+      <ComboBox fx:id="ComboBoxOrigenOpcion" layoutX="237.0" layoutY="187.0" prefHeight="42.0" prefWidth="180.0" visibleRowCount="5" />
+      
+      <!-- ComboBox para seleccionar la moneda de destino -->
+      <ComboBox fx:id="ComboBoxDestinoOpcion" layoutX="526.0" layoutY="187.0" prefHeight="42.0" prefWidth="180.0" visibleRowCount="5" />
+      
+      <!-- Etiqueta de título para el conversor de divisas -->
+      <Label alignment="CENTER" layoutX="210.0" layoutY="14.0" prefHeight="35.0" prefWidth="531.0" text="Conversor de divisas">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      
+      <!-- Etiqueta que indica "De:" -->
+      <Label layoutX="254.0" layoutY="150.0" text="De:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      
+      <!-- Etiqueta para mostrar la moneda de origen seleccionada -->
+      <Label fx:id="myLabelOrigen" alignment="CENTER" layoutX="263.0" layoutY="150.0" prefHeight="27.0" prefWidth="129.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      
+      <!-- Etiqueta que indica "Para:" -->
+      <Label layoutX="533.0" layoutY="150.0" text="Para:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      
+      <!-- Etiqueta para mostrar la moneda de destino seleccionada -->
+      <Label fx:id="myLabelDestino" alignment="CENTER" layoutX="552.0" layoutY="150.0" prefHeight="27.0" prefWidth="129.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      
+      <!-- Botón para realizar la conversión de divisas -->
+      <Button fx:id="convertirBoton" layoutX="402.0" layoutY="115.0" mnemonicParsing="false" onAction="#metodoConvertir" prefHeight="25.0" prefWidth="138.0" text="Convertir" />
+      
+      <!-- Botón para reiniciar la conversión de divisas -->
+      <Button fx:id="resetearBoton" layoutX="440.0" layoutY="246.0" mnemonicParsing="false" onAction="#metodoResetear" text="Resetear" />
+      
+      <!-- Etiqueta para "Ingrese la cantidad:" -->
+      <Label alignment="CENTER" layoutX="209.0" layoutY="48.0" prefHeight="20.0" prefWidth="531.0" text="Ingrese la cantidad:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      
+      <!-- Etiqueta para "Resultado:" -->
+      <Label alignment="CENTER" layoutX="402.0" layoutY="273.0" prefHeight="27.0" prefWidth="138.0" text="Resultado:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      
+      <!-- Etiqueta para mostrar el resultado de la conversión -->
+      <Label fx:id="myLabelResultado" alignment="CENTER" layoutX="211.0" layoutY="286.0" prefHeight="79.0" prefWidth="531.0" textAlignment="CENTER" visible="false" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      
+	  <!-- Campo de texto para que el usuario ingrese la cantidad a convertir -->
+      <TextField fx:id="myTextFieldInput" layoutX="413.0" layoutY="68.0" prefHeight="25.0" prefWidth="117.0" promptText="Eje. 255" />
+      
+      <!-- ImageView para el icono "Revertir" para intercambiar moneda de origen y destino -->
+      <ImageView fx:id="myRevertirImageView" fitHeight="62.0" fitWidth="81.0" layoutX="431.0" layoutY="177.0" onMouseClicked="#metodoRevertir" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/ImagenRevertir.png" />
+         </image>
+      </ImageView>
+      
+      <!-- ListView para mostrar las opciones de monedas en un estilo de menú -->
+      <ListView fx:id="myListView" layoutY="113.0" onMouseClicked="#opcionesMenu" prefHeight="165.0" prefWidth="210.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ListView>
+      
+      <!-- Etiqueta para el fondo del menú -->
+      <Label fx:id="menuFondo" alignment="CENTER" prefHeight="115.0" prefWidth="210.5" text="Menú">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      
+      <!-- Etiqueta para el fondo del resultado -->
+      <Label fx:id="menuFondo" alignment="CENTER" layoutY="272.0" prefHeight="106.0" prefWidth="211.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      
+      <!-- Etiqueta para mostrar el mensaje de información para copiar el resultado -->
+      <Label fx:id="myLabelMensajeInformacion" alignment="CENTER" layoutX="206.0" layoutY="357.0" prefHeight="17.0" prefWidth="531.0" text="Para copiar el resultado de doble click en el texto :)" textAlignment="JUSTIFY" visible="false" />
+      
+      <!-- Etiqueta para mostrar las incógnitas de la moneda de origen -->
+      <Label fx:id="myLabelsIncognitasOrigen" layoutX="315.0" layoutY="150.0" text="???">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      
+      <!-- Etiqueta para mostrar las incógnitas de la moneda de destino -->
+      <Label fx:id="myLabelsIncognitasDestino" layoutX="603.0" layoutY="150.0" text="???">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+
+	  <!-- Etiqueta para la indicación del prompt de la moneda de destino -->
+      <Label fx:id="labelPromptDestino" alignment="CENTER" layoutX="525.0" layoutY="187.0" prefHeight="42.0" prefWidth="180.0" text="Divisas" />
+      
+      <!-- Etiqueta para la indicación del prompt de la moneda de origen -->
+      <Label fx:id="labelPromptOrigen" alignment="CENTER" layoutX="237.0" layoutY="187.0" prefHeight="42.0" prefWidth="180.0" text="Divisas" />
+     
+      <!-- Etiqueta para mostrar información adicional sobre las opciones de monedas -->
+      <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="631.0" prefHeight="42.0" prefWidth="111.0" text="*Haga doble click en las divisas para usar" wrapText="true">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
